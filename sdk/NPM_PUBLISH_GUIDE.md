@@ -14,7 +14,7 @@
 2. **Update these fields:**
    ```json
    {
-     "name": "@your-username/everletter-sdk",
+     "name": "@shreyzeous21/everletter-sdk",
      "author": "Your Name <your-email@example.com>",
      "repository": {
        "url": "https://github.com/your-username/everletter.git"
@@ -86,7 +86,7 @@ npm publish
 
 ### Step 7: Verify Publication
 
-1. Go to [npmjs.com/package/@your-username/everletter-sdk](https://www.npmjs.com)
+1. Go to [npmjs.com/package/@shreyzeous21/everletter-sdk](https://www.npmjs.com/package/@shreyzeous21/everletter-sdk)
 2. Search for your package name
 3. You should see it published! 🎉
 
@@ -95,21 +95,21 @@ npm publish
 ### Installation
 
 ```bash
-npm install @your-username/everletter-sdk
+npm install @shreyzeous21/everletter-sdk
 ```
 
 ### Usage
 
 **React:**
 ```tsx
-import { EverLetterTemplate } from '@your-username/everletter-sdk/react';
+import { EverLetterTemplate } from '@shreyzeous21/everletter-sdk/react';
 
 function MyComponent() {
   return (
     <EverLetterTemplate
       slug="newsletter-template"
       variables={[{ key: "title", value: "Welcome!" }]}
-      baseUrl="https://your-vercel-app.vercel.app"
+      baseUrl="https://everletter.vercel.app"
     />
   );
 }
@@ -117,10 +117,10 @@ function MyComponent() {
 
 **Vanilla JavaScript:**
 ```javascript
-import { EverLetterSDK } from '@your-username/everletter-sdk';
+import { EverLetterSDK } from '@shreyzeous21/everletter-sdk';
 
 const sdk = new EverLetterSDK({
-  baseUrl: 'https://your-vercel-app.vercel.app'
+  baseUrl: 'https://everletter.vercel.app'
 });
 
 const result = await sdk.renderTemplate({
@@ -149,7 +149,7 @@ When you make changes:
 
 3. **Users update:**
    ```bash
-   npm update @your-username/everletter-sdk
+   npm update @shreyzeous21/everletter-sdk
    ```
 
 ## Version Numbering (Semantic Versioning)
@@ -162,7 +162,7 @@ When you make changes:
 
 ### Error: "Package name already exists"
 - Choose a different name
-- Or use a scoped package: `@your-username/everletter-sdk`
+- Or use a scoped package: `@shreyzeous21/everletter-sdk`
 
 ### Error: "You must verify your email"
 - Check your email and verify
@@ -193,7 +193,7 @@ Before publishing:
 
 After publishing:
 - [ ] Verify package appears on npmjs.com
-- [ ] Test installation: `npm install @your-username/everletter-sdk`
+- [ ] Test installation: `npm install @shreyzeous21/everletter-sdk`
 - [ ] Update documentation with package name
 - [ ] Share with others! 🚀
 
@@ -216,7 +216,7 @@ npm login
 npm publish --access public
 
 # 6. Done! Others can now:
-npm install @your-username/everletter-sdk
+npm install @shreyzeous21/everletter-sdk
 ```
 
 ## Pro Tips

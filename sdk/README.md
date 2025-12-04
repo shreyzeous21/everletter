@@ -4,12 +4,10 @@ A powerful SDK for integrating EverLetter templates into any website or applicat
 
 ## Installation
 
-### NPM (After Publishing)
+### NPM
 ```bash
-npm install @your-username/everletter-sdk
+npm install @shreyzeous21/everletter-sdk
 ```
-
-**Note:** Replace `@your-username` with your actual NPM username, or use `everletter-sdk` if you publish with that name.
 
 ### Local Development
 If using locally before publishing:
@@ -29,7 +27,7 @@ import { EverLetterTemplate } from './sdk/react/EverLetterTemplate';
 ### React
 
 ```tsx
-import { EverLetterTemplate } from '@everletter/sdk/react';
+import { EverLetterTemplate } from '@shreyzeous21/everletter-sdk/react';
 
 function MyComponent() {
   return (
@@ -39,7 +37,7 @@ function MyComponent() {
         { key: "title", value: "Welcome!" },
         { key: "description", value: "This is a newsletter" },
       ]}
-      baseUrl="https://your-api-domain.com"
+      baseUrl="https://everletter.vercel.app"
     />
   );
 }
@@ -48,7 +46,7 @@ function MyComponent() {
 ### React Hook
 
 ```tsx
-import { useEverLetterTemplate } from '@everletter/sdk/react';
+import { useEverLetterTemplate } from '@shreyzeous21/everletter-sdk/react';
 
 function MyComponent() {
   const { html, loading, error, reload } = useEverLetterTemplate({
@@ -56,7 +54,7 @@ function MyComponent() {
     variables: [
       { key: "title", value: "Welcome!" },
     ],
-    baseUrl: "https://your-api-domain.com",
+    baseUrl: "https://everletter.vercel.app",
   });
 
   if (loading) return <p>Loading...</p>;
@@ -69,10 +67,10 @@ function MyComponent() {
 ### Vanilla JavaScript
 
 ```javascript
-import { EverLetterSDK } from '@everletter/sdk';
+import { EverLetterSDK } from '@shreyzeous21/everletter-sdk';
 
 const sdk = new EverLetterSDK({
-  baseUrl: 'https://your-api-domain.com'
+  baseUrl: 'https://everletter.vercel.app'
 });
 
 // Render template
@@ -100,7 +98,7 @@ document.getElementById('template-container').innerHTML = result.html;
   
   <script>
     const sdk = new EverLetterSDK({
-      baseUrl: 'https://your-api-domain.com'
+      baseUrl: 'https://everletter.vercel.app'
     });
 
     sdk.renderTemplate({
@@ -263,7 +261,7 @@ import type {
   RenderTemplateOptions,
   RenderTemplateResponse,
   RenderTemplateError,
-} from '@everletter/sdk';
+} from '@shreyzeous21/everletter-sdk';
 ```
 
 ## Examples
@@ -273,7 +271,7 @@ import type {
 ```tsx
 'use client';
 
-import { EverLetterTemplate } from '@everletter/sdk/react';
+import { EverLetterTemplate } from '@shreyzeous21/everletter-sdk/react';
 
 export default function NewsletterPage() {
   return (
@@ -303,7 +301,7 @@ export default function NewsletterPage() {
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { EverLetterSDK } from '@everletter/sdk';
+import { EverLetterSDK } from '@shreyzeous21/everletter-sdk';
 
 const html = ref('');
 const loading = ref(true);

@@ -17,7 +17,7 @@ export function NewsletterExample() {
         { key: "cta_text", value: "Subscribe Now" },
         { key: "cta_url", value: "https://example.com/subscribe" },
       ]}
-      baseUrl="https://your-api-domain.com"
+      baseUrl="https://everletter.vercel.app"
       className="newsletter-container"
       onLoad={(html) => console.log("Template loaded:", html)}
       onError={(error) => console.error("Error:", error)}

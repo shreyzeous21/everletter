@@ -11,11 +11,9 @@ Edit `sdk/package.json` and change:
 
 ```json
 {
-  "name": "@your-username/everletter-sdk"
+  "name": "@shreyzeous21/everletter-sdk"
 }
 ```
-
-Replace `@your-username` with your actual NPM username, or use `everletter-sdk` if available.
 
 ## Step 2: Login to NPM
 
@@ -40,20 +38,20 @@ npm publish --access public
 
 ## Verify
 
-Visit: `https://www.npmjs.com/package/@your-username/everletter-sdk`
+Visit: `https://www.npmjs.com/package/@shreyzeous21/everletter-sdk`
 
 ## How Others Use It
 
 ```bash
-npm install @your-username/everletter-sdk
+npm install @shreyzeous21/everletter-sdk
 ```
 
 ```tsx
-import { EverLetterTemplate } from '@your-username/everletter-sdk/react';
+import { EverLetterTemplate } from '@shreyzeous21/everletter-sdk/react';
 
 <EverLetterTemplate
   slug="newsletter-template"
-  baseUrl="https://your-vercel-app.vercel.app"
+  baseUrl="https://everletter.vercel.app"
 />
 ```
 

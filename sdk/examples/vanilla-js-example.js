@@ -6,7 +6,7 @@ import { EverLetterSDK } from "../core";
 
 // Initialize SDK
 const sdk = new EverLetterSDK({
-  baseUrl: "https://your-api-domain.com",
+  baseUrl: "https://everletter.vercel.app",
 });
 
 // Example 1: Render template and insert into DOM

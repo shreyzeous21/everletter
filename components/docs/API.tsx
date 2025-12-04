@@ -20,7 +20,7 @@ export default function API() {
   const baseUrl =
     typeof window !== "undefined"
       ? window.location.origin
-      : process.env.BETTER_AUTH_URL || "https://your-domain.com";
+      : process.env.BETTER_AUTH_URL || "https://everletter.vercel.app";
 
   // API Base URL - No authentication required
   const apiUrl = `${baseUrl}/api/templates`;
@@ -479,7 +479,7 @@ export default function API() {
           <div>
             <h3 className="text-sm font-semibold mb-2">Installation</h3>
             <CodeBlock copyId="sdk-install">
-              {`npm install @everletter/sdk`}
+              {`npm install @shreyzeous21/everletter-sdk`}
             </CodeBlock>
           </div>
 
@@ -488,7 +488,7 @@ export default function API() {
           <div>
             <h3 className="text-sm font-semibold mb-2">React Example</h3>
             <CodeBlock copyId="sdk-react-example">
-              {`import { EverLetterTemplate } from '@everletter/sdk/react';
+              {`import { EverLetterTemplate } from '@shreyzeous21/everletter-sdk/react';
 
 function MyComponent() {
   return (
@@ -510,7 +510,7 @@ function MyComponent() {
           <div>
             <h3 className="text-sm font-semibold mb-2">Vanilla JavaScript Example</h3>
             <CodeBlock copyId="sdk-vanilla-example">
-              {`import { EverLetterSDK } from '@everletter/sdk';
+              {`import { EverLetterSDK } from '@shreyzeous21/everletter-sdk';
 
 const sdk = new EverLetterSDK({
   baseUrl: '${baseUrl}'

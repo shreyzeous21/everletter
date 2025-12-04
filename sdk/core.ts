@@ -17,7 +17,7 @@ export class EverLetterSDK {
     this.baseUrl = config.baseUrl || 
       (typeof window !== "undefined" 
         ? window.location.origin 
-        : "https://your-domain.com");
+        : "https://everletter.vercel.app");
   }
 
   /**

@@ -8,7 +8,7 @@
 
 ```json
 {
-  "name": "@your-username/everletter-sdk",
+  "name": "@shreyzeous21/everletter-sdk",
   "version": "1.0.0",
   "description": "Official SDK for integrating EverLetter templates",
   "main": "dist/index.js",
@@ -89,26 +89,26 @@ npm publish --access public
 ### Installation
 
 ```bash
-npm install @your-username/everletter-sdk
+npm install @shreyzeous21/everletter-sdk
 ```
 
 ### Usage in Their Code
 
 ```tsx
 // React
-import { EverLetterTemplate } from '@your-username/everletter-sdk/react';
+import { EverLetterTemplate } from '@shreyzeous21/everletter-sdk/react';
 
 <EverLetterTemplate
   slug="newsletter-template"
   variables={[{ key: "title", value: "Hello" }]}
-  baseUrl="https://your-vercel-app.vercel.app"
+  baseUrl="https://everletter.vercel.app"
 />
 
 // Vanilla JS
-import { EverLetterSDK } from '@your-username/everletter-sdk';
+import { EverLetterSDK } from '@shreyzeous21/everletter-sdk';
 
 const sdk = new EverLetterSDK({
-  baseUrl: 'https://your-vercel-app.vercel.app'
+  baseUrl: 'https://everletter.vercel.app'
 });
 ```
 
@@ -189,6 +189,6 @@ npm publish
 
 3. Others update:
 ```bash
-npm update @your-username/everletter-sdk
+   npm update @shreyzeous21/everletter-sdk
 ```
 

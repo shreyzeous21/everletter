@@ -21,7 +21,7 @@ export default function SDK() {
   const baseUrl =
     typeof window !== "undefined"
       ? window.location.origin
-      : process.env.BETTER_AUTH_URL || "https://your-domain.com";
+      : process.env.BETTER_AUTH_URL || "https://everletter.vercel.app";
 
   const copyToClipboard = (text: string, id: string, label?: string) => {
     navigator.clipboard.writeText(text);
@@ -102,7 +102,7 @@ export default function SDK() {
           <div>
             <h3 className="text-sm font-semibold mb-2">NPM</h3>
             <CodeBlock copyId="install-npm">
-              {`npm install @everletter/sdk`}
+              {`npm install @shreyzeous21/everletter-sdk`}
             </CodeBlock>
           </div>
 
@@ -111,7 +111,7 @@ export default function SDK() {
           <div>
             <h3 className="text-sm font-semibold mb-2">Yarn</h3>
             <CodeBlock copyId="install-yarn">
-              {`yarn add @everletter/sdk`}
+              {`yarn add @shreyzeous21/everletter-sdk`}
             </CodeBlock>
           </div>
 
@@ -120,7 +120,7 @@ export default function SDK() {
           <div>
             <h3 className="text-sm font-semibold mb-2">PNPM</h3>
             <CodeBlock copyId="install-pnpm">
-              {`pnpm add @everletter/sdk`}
+              {`pnpm add @shreyzeous21/everletter-sdk`}
             </CodeBlock>
           </div>
         </CardContent>
@@ -155,7 +155,7 @@ export default function SDK() {
                   slug and variables.
                 </p>
                 <CodeBlock copyId="react-component-example">
-                  {`import { EverLetterTemplate } from '@everletter/sdk/react';
+                  {`import { EverLetterTemplate } from '@shreyzeous21/everletter-sdk/react';
 
 function MyComponent() {
   return (
@@ -188,7 +188,7 @@ function MyComponent() {
                   error states.
                 </p>
                 <CodeBlock copyId="react-hook-example">
-                  {`import { useEverLetterTemplate } from '@everletter/sdk/react';
+                  {`import { useEverLetterTemplate } from '@shreyzeous21/everletter-sdk/react';
 
 function MyComponent() {
   const { html, loading, error, reload } = useEverLetterTemplate({
@@ -225,7 +225,7 @@ function MyComponent() {
                   Vue, Angular, or plain HTML.
                 </p>
                 <CodeBlock copyId="vanilla-js-example" language="javascript">
-                  {`import { EverLetterSDK } from '@everletter/sdk';
+                  {`import { EverLetterSDK } from '@shreyzeous21/everletter-sdk';
 
 // Initialize SDK
 const sdk = new EverLetterSDK({

@@ -18,7 +18,7 @@
    - Click "Deploy"
 
 3. **Get Your Deployment URL:**
-   - After deployment, you'll get: `https://your-app.vercel.app`
+   - After deployment, you'll get: `https://everletter.vercel.app`
    - Or use your custom domain if configured
 
 ### Step 2: Update Environment Variables (Optional)
@@ -26,11 +26,11 @@
 If you want to set a default API URL:
 
 1. In Vercel Dashboard → Your Project → Settings → Environment Variables
-2. Add: `NEXT_PUBLIC_API_URL` = `https://your-app.vercel.app`
+2. Add: `NEXT_PUBLIC_API_URL` = `https://everletter.vercel.app`
 
 ### Step 3: Test Your Deployment
 
-Visit: `https://your-app.vercel.app/docs`
+Visit: `https://everletter.vercel.app/docs`
 
 - ✅ Check the "SDK" tab
 - ✅ Check the "API" tab  
@@ -44,7 +44,7 @@ Other developers can use your API directly:
 
 ```javascript
 // In their website
-fetch('https://your-app.vercel.app/api/templates/newsletter-template/render', {
+fetch('https://everletter.vercel.app/api/templates/newsletter-template/render', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -71,14 +71,14 @@ npm publish --access public
 #### Step 2: Others Install Your SDK
 
 ```bash
-npm install @your-username/everletter-sdk
+npm install @shreyzeous21/everletter-sdk
 ```
 
 #### Step 3: Others Use in Their Code
 
 **React:**
 ```tsx
-import { EverLetterTemplate } from '@your-username/everletter-sdk/react';
+import { EverLetterTemplate } from '@shreyzeous21/everletter-sdk/react';
 
 function MyComponent() {
   return (
@@ -87,7 +87,7 @@ function MyComponent() {
       variables={[
         { key: "title", value: "Welcome!" }
       ]}
-      baseUrl="https://your-app.vercel.app"
+      baseUrl="https://everletter.vercel.app"
     />
   );
 }
@@ -95,10 +95,10 @@ function MyComponent() {
 
 **Vanilla JavaScript:**
 ```javascript
-import { EverLetterSDK } from '@your-username/everletter-sdk';
+import { EverLetterSDK } from '@shreyzeous21/everletter-sdk';
 
 const sdk = new EverLetterSDK({
-  baseUrl: 'https://your-app.vercel.app'
+  baseUrl: 'https://everletter.vercel.app'
 });
 
 const result = await sdk.renderTemplate({
@@ -149,7 +149,7 @@ Or you can set a default in the SDK (update `sdk/core.ts`):
 constructor(config: EverLetterSDKConfig = {}) {
   this.baseUrl = config.baseUrl || 
     process.env.NEXT_PUBLIC_API_URL || 
-    "https://your-app.vercel.app"; // Your default production URL
+    "https://everletter.vercel.app"; // Your default production URL
 }
 ```
 

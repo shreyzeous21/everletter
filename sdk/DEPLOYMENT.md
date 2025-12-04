@@ -12,7 +12,7 @@ When deploying to Vercel, you need to make sure the SDK uses the correct product
 
    - Go to your Vercel project settings
    - Add environment variable: `NEXT_PUBLIC_API_URL`
-   - Value: `https://your-domain.vercel.app` (or your custom domain)
+   - Value: `https://everletter.vercel.app`
 
 2. **Update SDK to use environment variable:**
    ```typescript
@@ -32,7 +32,7 @@ Update `components/docs/Showcase.tsx` to use environment variable:
 const baseUrl =
   typeof window !== "undefined"
     ? window.location.origin
-    : process.env.NEXT_PUBLIC_API_URL || "https://your-domain.vercel.app";
+    : process.env.NEXT_PUBLIC_API_URL || "https://everletter.vercel.app";
 ```
 
 ### Step 3: Deploy to Vercel
@@ -55,7 +55,7 @@ git push origin main
 
    ```json
    {
-     "name": "@your-username/everletter-sdk",
+     "name": "@shreyzeous21/everletter-sdk",
      "version": "1.0.0",
      "main": "dist/index.js",
      "types": "dist/index.d.ts",
@@ -98,7 +98,7 @@ npm publish --access public
 #### Step 3: Other Developers Install
 
 ```bash
-npm install @your-username/everletter-sdk
+npm install @shreyzeous21/everletter-sdk
 ```
 
 ### Option 2: GitHub Package (Free Alternative)
@@ -108,7 +108,7 @@ npm install @your-username/everletter-sdk
    ```json
    // package.json
    {
-     "name": "@your-username/everletter-sdk",
+     "name": "@shreyzeous21/everletter-sdk",
      "publishConfig": {
        "registry": "https://npm.pkg.github.com"
      }
@@ -123,7 +123,7 @@ npm install @your-username/everletter-sdk
 
 3. **Others install:**
    ```bash
-   npm install @your-username/everletter-sdk
+   npm install @shreyzeous21/everletter-sdk
    ```
 
 ### Option 3: CDN (For Browser Use)
@@ -162,7 +162,7 @@ Create a bundled version for CDN:
    <script src="https://cdn.your-domain.com/everletter.min.js"></script>
    <script>
      const sdk = new EverLetterSDK.EverLetterSDK({
-       baseUrl: "https://your-api.vercel.app",
+       baseUrl: "https://everletter.vercel.app",
      });
    </script>
    ```
@@ -172,20 +172,20 @@ Create a bundled version for CDN:
 ### After Installing from NPM
 
 ```bash
-npm install @your-username/everletter-sdk
+npm install @shreyzeous21/everletter-sdk
 ```
 
 ### React Example
 
 ```tsx
-import { EverLetterTemplate } from "@your-username/everletter-sdk/react";
+import { EverLetterTemplate } from "@shreyzeous21/everletter-sdk/react";
 
 function MyComponent() {
   return (
     <EverLetterTemplate
       slug="newsletter-template"
       variables={[{ key: "title", value: "Welcome!" }]}
-      baseUrl="https://your-api.vercel.app"
+      baseUrl="https://everletter.vercel.app"
     />
   );
 }
@@ -194,7 +194,7 @@ function MyComponent() {
 ### Vanilla JS Example
 
 ```javascript
-import { EverLetterSDK } from "@your-username/everletter-sdk";
+import { EverLetterSDK } from "@shreyzeous21/everletter-sdk";
 
 const sdk = new EverLetterSDK({
   baseUrl: "https://your-api.vercel.app",
