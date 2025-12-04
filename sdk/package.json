@@ -1,0 +1,71 @@
+{
+  "name": "@everletter/sdk",
+  "version": "1.0.0",
+  "description": "Official SDK for integrating EverLetter templates into any website or application. Works with React, Vue, and vanilla JavaScript.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react/EverLetterTemplate.js",
+      "types": "./dist/react/EverLetterTemplate.d.ts"
+    },
+    "./core": {
+      "import": "./dist/core.js",
+      "types": "./dist/core.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types.js",
+      "types": "./dist/types.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "everletter",
+    "templates",
+    "email-templates",
+    "newsletter",
+    "sdk",
+    "react",
+    "vue",
+    "javascript",
+    "typescript"
+  ],
+  "author": "EverLetter",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/everletter.git",
+    "directory": "sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/everletter/issues"
+  },
+  "homepage": "https://github.com/your-username/everletter#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
+

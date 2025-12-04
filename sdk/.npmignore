@@ -1,0 +1,28 @@
+# Source files (only dist should be published)
+*.ts
+*.tsx
+!*.d.ts
+
+# Development files
+examples/
+TESTING.md
+DEPLOYMENT.md
+PUBLISH.md
+NPM_PUBLISH_GUIDE.md
+.npmignore
+
+# Build artifacts (keep dist)
+node_modules/
+*.log
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
