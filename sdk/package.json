@@ -1,5 +1,5 @@
 {
-  "name": "@everletter/sdk-shrey",
+  "name": "@shreyzeous21/everletter-sdk",
   "version": "1.1.0",
   "description": "Official SDK for integrating EverLetter templates into any website or application. Works with React, Vue, and vanilla JavaScript.",
   "main": "dist/index.js",
