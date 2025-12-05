@@ -8,8 +8,9 @@ export default function FullStatsControl() {
   const { totalSubscriptions, totalUsers, totalTemplates } = useChart();
 
   const totalRevenue = totalSubscriptions?.reduce((acc, subscription) => {
-    return acc + subscription.payment?.amount || 0;
+    return acc + (subscription.payment?.amount ?? 0);
   }, 0);
+
   return (
     <CardWrapper title="Stats" className="">
       <div className="flex items-center p-4 gap-4">
