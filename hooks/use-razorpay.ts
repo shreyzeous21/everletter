@@ -2,10 +2,11 @@
 
 import {
   createRazorpayOrder,
+  getPaymentsLogs,
   getUserSubscriptions,
   verifyRazorpayPayment,
 } from "@/actions/razorpay-actions";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
@@ -76,10 +77,15 @@ export function useRazorpay() {
     },
   });
 
+  const getPaymentsLogsQuery = useQuery({
+    queryKey: ["payments-logs"],
+    queryFn: async () => await getPaymentsLogs(),
+  });
   return {
     createOrder,
     verifyPayment,
     getUserSubscriptionsMutation,
+    getPaymentsLogsQuery,
     isLoading: getUserSubscriptionsMutation.isPending,
   };
 }

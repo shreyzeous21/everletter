@@ -3,16 +3,21 @@ import React from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Button } from "../ui/button";
 import { SidebarTrigger } from "../ui/sidebar";
+import { cn } from "@/lib/utils";
 
 export default function CardWrapper({
   children,
   title,
+  className,
 }: {
   children: React.ReactNode;
   title: string;
+  className?: string;
 }) {
   return (
-    <div className="h-[calc(100svh-1rem)] flex flex-col gap-2 ">
+    <div
+      className={cn("h-[calc(100svh-1rem)] flex flex-col gap-2 ", className)}
+    >
       {/* Header */}
       <div className="flex items-center w-full gap-4 justify-between">
         <SidebarTrigger />
@@ -31,7 +36,9 @@ export default function CardWrapper({
           </PopoverTrigger>
           <PopoverContent className="w-80" align="end">
             <div className="space-y-2">
-              <h3 className="font-semibold text-sm mb-3">Notifications</h3>
+              <h3 className="font-semibold text-sm  border-b border-primary pb-2">
+                Notifications
+              </h3>
               <div className="space-y-2 max-h-96 overflow-y-auto">
                 <div className="flex gap-3 p-2 rounded-md hover:bg-accent cursor-pointer">
                   <div className="flex-1">
@@ -41,40 +48,6 @@ export default function CardWrapper({
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">
                       2 minutes ago
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-3 p-2 rounded-md hover:bg-accent cursor-pointer">
-                  <div className="flex-1">
-                    <p className="text-sm font-medium">Profile update</p>
-                    <p className="text-xs text-muted-foreground">
-                      Your profile has been successfully updated
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      1 hour ago
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-3 p-2 rounded-md hover:bg-accent cursor-pointer">
-                  <div className="flex-1">
-                    <p className="text-sm font-medium">System maintenance</p>
-                    <p className="text-xs text-muted-foreground">
-                      Scheduled maintenance will occur tonight at 2 AM
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      3 hours ago
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-3 p-2 rounded-md hover:bg-accent cursor-pointer">
-                  <div className="flex-1">
-                    <p className="text-sm font-medium">Welcome!</p>
-                    <p className="text-xs text-muted-foreground">
-                      Welcome to Everletter. Get started by exploring the
-                      dashboard.
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      1 day ago
                     </p>
                   </div>
                 </div>

@@ -4,7 +4,8 @@ A powerful SDK for integrating EverLetter templates into any website or applicat
 
 ## Installation
 
-### NPM
+### 
+
 ```bash
 npm install @shreyzeous21/everletter-sdk
 ```

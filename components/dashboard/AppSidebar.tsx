@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  BarChartIcon,
+  CreditCardIcon,
   FileIcon,
   LayoutGridIcon,
   NewspaperIcon,
@@ -26,6 +28,11 @@ const menuItems = [
     title: "Main",
     items: [
       {
+        title: "Stats",
+        icon: BarChartIcon,
+        url: "/dashboard/stats",
+      },
+      {
         title: "Manage Dashboard",
         icon: LayoutGridIcon,
         url: "/dashboard/manage-dashboard",
@@ -40,6 +47,12 @@ const menuItems = [
         title: "Templates",
         icon: FileIcon,
         url: "/dashboard/templates",
+      },
+      {
+        title: "Payments",
+        icon: CreditCardIcon,
+        url: "/dashboard/payments",
+        isAdmin: true,
       },
     ],
   },
@@ -60,7 +73,7 @@ export default function AppSidebar({ user }: { user?: any }) {
 
   return (
     <Sidebar collapsible="icon">
-      <SidebarHeader>
+      <SidebarHeader className="border-b border-primary">
         <SidebarMenuItem>
           <SidebarMenuButton asChild className="gap-x-4 h-10 px-4">
             <Link prefetch href="/">

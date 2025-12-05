@@ -266,3 +266,13 @@ export async function getUserSubscriptions(userId: string) {
   });
   return subscriptions;
 }
+
+export async function getPaymentsLogs() {
+  const payments = await prisma.payment.findMany({
+    orderBy: { createdAt: "desc" },
+    include: {
+      user: true,
+    },
+  });
+  return payments;
+}
